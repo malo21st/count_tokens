@@ -12,7 +12,8 @@ model_set = {
 
 def num_tokens_from_messages(messages, model="gpt-3.5-turbo-0613"):
     """Return the number of tokens used by a list of messages."""
-    return "ほにゃららトークン"
+    count = len(messagese)
+    return count
 
 # view
 st.title("トークン・カウントあぷり")
@@ -23,10 +24,8 @@ col1, col2 = st.columns(2)
 with col1:
     text_1 = st.text_area("入力して下さい：")
 with col2:
-    st.metric(label="カウント結果：", value="tokens")
+    result = st.empty()
 
 if st.button("トークンをカウント", type="primary"):
     tokens = num_tokens_from_messages(text_1, llm_model)
-
-if tokens:
-    st.metric(label="カウント結果：", value = tokens)
+    result.metric(label="カウント結果：", value=f"{tokens} tokens")
