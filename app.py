@@ -20,7 +20,7 @@ llm_model = st.selectbox('モデルを選んで下さい：', model_set)
 
 col1, col2 = st.columns(2)
 with col1:
-    text_1 = st.text_area()
+    text_1 = st.text_area("入力して下さい：")
 with col2:
     st.metric(value="tokens")
 
