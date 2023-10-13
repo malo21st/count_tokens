@@ -22,10 +22,10 @@ col1, col2 = st.columns(2)
 with col1:
     text_1 = st.text_area("入力して下さい：")
 with col2:
-    st.metric(value="tokens")
+    st.metric(label="カウント結果：", value="tokens")
 
 if st.button("トークンをカウント", type="primary"):
     tokens = num_tokens_from_messages(text_1, llm_model)
 
 if tokens:
-    st.metric(value = tokens)
+    st.metric(label="カウント結果：", value = tokens)
