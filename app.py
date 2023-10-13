@@ -75,8 +75,8 @@ with col4:
 if st.button("トークンをカウント", type="primary"):
     tokens_1 = num_tokens_from_messages(text_1, llm_model)
     tokens_2 = num_tokens_from_messages(text_2, llm_model)
-    result_1.metric(label="カウント結果：", value=f"{tokens_1}", label_visibility="hidden")
-    result_2.metric(label="カウント結果：", value=f"{tokens_2}", label_visibility="hidden")
+    result_1.metric(label="", value=f"{tokens_1:,d}")
+    result_2.metric(label="", value=f"{tokens_2:,d}")
 
 st.write("\n\n")
 st.markdown(':memo: [openai-cookbook/examples/How_to_count_tokens_with_tiktoken.ipynb](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb)')
