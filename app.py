@@ -79,4 +79,4 @@ if st.button("トークンをカウント", type="primary"):
     result_2.metric(label="カウント結果：", value=f"{tokens_2} tokens")
 
 st.write("\n\n")
-st.markdown(':balloon:[openai-cookbook/examples/How_to_count_tokens_with_tiktoken.ipynb](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb)')
+st.markdown(':memo: [openai-cookbook/examples/How_to_count_tokens_with_tiktoken.ipynb](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb)')
