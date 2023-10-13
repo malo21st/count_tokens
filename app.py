@@ -60,13 +60,13 @@ st.title("トークン・カウントあぷり")
 
 llm_model = st.selectbox('モデルを選んで下さい：', model_set)
 
-col1, col2 = st.columns(2)
+col1, col2 = st.columns([0.7, 0.3])
 with col1:
     text_1 = st.text_area("テキスト１：", key=1)
 with col2:
     result_1 = st.empty()
 
-col3, col4 = st.columns(2)
+col3, col4 = st.columns([0.7, 0.3])
 with col3:
     text_2 = st.text_area("テキスト２：", key=2)
 with col4:
@@ -75,8 +75,8 @@ with col4:
 if st.button("トークンをカウント", type="primary"):
     tokens_1 = num_tokens_from_messages(text_1, llm_model)
     tokens_2 = num_tokens_from_messages(text_2, llm_model)
-    result_1.metric(label="カウント結果：", value=f"{tokens_1} tokens")
-    result_2.metric(label="カウント結果：", value=f"{tokens_2} tokens")
+    result_1.metric(label="カウント結果：", value=f"{tokens_1}", label_visibility="hidden")
+    result_2.metric(label="カウント結果：", value=f"{tokens_2}", label_visibility="hidden")
 
 st.write("\n\n")
 st.markdown(':memo: [openai-cookbook/examples/How_to_count_tokens_with_tiktoken.ipynb](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb)')
