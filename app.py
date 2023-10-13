@@ -62,13 +62,13 @@ llm_model = st.selectbox('モデルを選んで下さい：', model_set)
 
 col1, col2 = st.columns(2)
 with col1:
-    text_1 = st.text_area("テキスト１：")
+    text_1 = st.text_area("テキスト１：", key=1)
 with col2:
     result_1 = st.empty()
 
 col3, col4 = st.columns(2)
 with col3:
-    text_2 = st.text_area("テキスト２：")
+    text_2 = st.text_area("テキスト２：", key=2)
 with col4:
     result_2 = st.empty()
 
